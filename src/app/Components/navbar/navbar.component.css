@@ -1,0 +1,25 @@
+/* Hide menu items on larger screens */
+.d-none {
+    display: none !important;
+}
+
+/* Show menu items on smaller screens */
+.d-md-none {
+    display: block !important;
+}
+
+/* Make sure the navbar items are displayed properly for smaller screens */
+.mat-menu-item {
+    padding: 10px;
+}
+
+/* If the screen width is medium or above, make the main menu visible */
+@media (min-width: 768px) {
+    .d-md-flex {
+        display: flex !important;
+    }
+
+    .d-md-none {
+        display: none !important;
+    }
+}

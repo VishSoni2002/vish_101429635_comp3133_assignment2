@@ -1,0 +1,14 @@
+<div class="container mt-5" *ngIf="employee">
+    <mat-card>
+        <h2>{{ employee.first_name }} {{ employee.last_name }}</h2>
+        <img *ngIf="employee.employee_photo" [src]="employee.employee_photo" alt="Employee Photo"
+            class="employee-photo">
+        <p><strong>Email:</strong> {{ employee.email }}</p>
+        <p><strong>Gender:</strong> {{ employee.gender }}</p>
+        <p><strong>Designation:</strong> {{ employee.designation }}</p>
+        <p><strong>Department:</strong> {{ employee.department }}</p>
+        <p><strong>Salary:</strong> {{ employee.salary }}</p>
+        <p><strong>Date of Joining:</strong> {{ employee.date_of_joining | date }}</p>
+        <button mat-raised-button color="primary" routerLink="/employees/edit/{{employee.id}}">Edit Employee</button>
+    </mat-card>
+</div>

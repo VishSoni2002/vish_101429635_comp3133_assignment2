@@ -1,0 +1,23 @@
+<mat-toolbar color="primary">
+    <div class="container-fluid d-flex justify-content-between align-items-center w-100">
+        <!-- Employee Management Title -->
+        <span class="navbar-brand" routerLink="/employees" style="cursor: pointer;">Employee Management</span>
+
+        <!-- Buttons for larger screens -->
+        <div class="d-none d-md-flex">
+            <button mat-button routerLink="/employees">Employees</button>
+            <button mat-button (click)="logout()">Logout</button>
+        </div>
+
+        <!-- Buttons for smaller screens -->
+        <div class="d-flex d-md-none">
+            <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="menu">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item routerLink="/employees">Employees</button>
+                <button mat-menu-item (click)="logout()">Logout</button>
+            </mat-menu>
+        </div>
+    </div>
+</mat-toolbar>
